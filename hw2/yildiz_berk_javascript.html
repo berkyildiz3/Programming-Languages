@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<title>HW2</title>
+<script>
+//Some lines are commented in sake of execution
+document.write("----------Types of Loop Control Variables----------<br><br>");
+document.write("For Loop: Numbers can be loop control variable <br><br>")
+//print 5 times with number control variable i
+for(i = 0; i < 5; i++)
+{
+    document.write("element(for - number)<br>");
+}
+document.write("<br>");
+document.write("<br>");
+
+//print 5 times with number(decimal) control variable i
+for(i = 0.0; i < 1; i=i+0.2)
+{
+    document.write("element(for - number(decimal))<br>");
+}
+document.write("<br>");
+document.write("<br>");
+
+//print nothing with boolean control varible i
+//for(i = true; i == false; i)
+//{
+//    document.write("loopElement(boolean)<br>");
+//    i=false;
+//}
+
+//print nothing with string control variable i
+//for(i = "a"; i == "e"; i)
+//{
+//    document.write("loopElement<br>");
+//    i = "e"    
+//}
+
+document.write("For-in Loop: All data types can be loop control variable <br><br>")
+
+//print 5 times regardless of the type of controll variable
+letters = ["a", "b", "c", "a", "a"]
+var letter;
+for (letter in letters)  
+{ 
+    document.write("foundLetter<br>"); 
+} 
+
+document.write("<br>");
+document.write("<br>");
+
+document.write("While Loop: Numbers, strings and booleans can be loop control variables <br><br>")
+
+//print 5 times with number control variable j
+j = 0; 
+while (j < 5) 
+{ 
+    document.write("element(while-number)<br>"); 
+    j++; 
+} 
+
+document.write("<br>");
+document.write("<br>");
+
+//print 5 times with number(decimal) control variable j
+j = 0.0; 
+while (j < 1) 
+{ 
+    document.write("element(while-number(decimal))<br>"); 
+    j+=0.2; 
+} 
+
+document.write("<br>");
+document.write("<br>");
+
+//print 2 times (1 iteration) with boolean control variable j
+j = true; 
+while (j != false) 
+{ 
+    document.write("element(while-boolean)<br>"); 
+    document.write("element(while-boolean)<br>"); 
+    j=false; 
+} 
+
+document.write("<br>");
+document.write("<br>");
+
+//print 2 times (1 iteration) with string control variable j
+while (j != "b") 
+{ 
+    document.write("element(while-string)<br>"); 
+    document.write("element(while-string)<br>"); 
+    j="b"; 
+}
+
+document.write("<br>");
+document.write("<br>");
+
+document.write("Do-While Loop: Numbers, strings and booleans can be loop control variables <br><br>")
+
+//print 5 times with number control variable k
+k = 0; 
+do 
+{ 
+    document.write("element(doWhile-number)<br>"); 
+    k++; 
+} while (k < 5); 
+
+document.write("<br>");
+document.write("<br>");
+
+//print 5 times with number(decimal) control variable k
+k = 0.0; 
+do 
+{ 
+    document.write("element(doWhile-number(decimal))<br>"); 
+    k += 0.2; 
+} while (k < 1); 
+
+document.write("<br>");
+document.write("<br>");
+
+//print 2 times (1 iteration) with boolean control variable k
+do 
+{ 
+    document.write("element(doWhile-boolean)<br>"); 
+    document.write("element(doWhile-boolean)<br>"); 
+    k=false; 
+} while (k != false); 
+
+document.write("<br>");
+document.write("<br>");
+
+//print 2 times (1 iteration) with string control variable k
+k = "a"; 
+do 
+{ 
+    document.write("element(doWhile-string)<br>"); 
+    document.write("element(doWhile-string)<br>"); 
+    k="b"; 
+} while (k != "b"); 
+
+document.write("<br>");
+document.write("<br>");
+
+document.write("----------Scopes of Loop Control Variables----------<br><br>");
+
+//Control for value of i
+for(i = 0; i < 5; i++)
+{
+    //document.write("element(for - number)<br>");
+}
+
+document.write("Value of i (from for loop) is: " + i + " => Scope of i is not limited with loop. In this case, it is a global variable.");
+document.write("<br>");
+document.write("<br>");
+
+//Control for value j
+while (j != "b") 
+{ 
+    //document.write("element(while-string)<br>"); 
+    //document.write("element(while-string)<br>"); 
+    j="b"; 
+}
+document.write("Value of j (from while loop) is: " + j + " => Scope of j is not limited with loop. In this case, it is a global variable.");
+document.write("<br>");
+document.write("<br>");
+
+do 
+{ 
+    //document.write("element(doWhile-boolean)<br>"); 
+    //document.write("element(doWhile-boolean)<br>"); 
+    k=false; 
+} while (k != false); 
+
+document.write("Value of k (from do-while loop) is: " + k + " => Scope of k is not limited with loop. In this case, it is a global variable.");
+document.write("<br>");
+document.write("<br>");
+
+document.write("----------Changing Loop Control Variables & Parameters----------<br><br>");
+
+//Prints just 1 time instead of 5 which shows that loop control variable can be changed in the loop and change can affect loop control.
+for(i = 0; i < 5; i++)
+{
+    document.write("element(variable change control)<br>");
+    i=4;
+}
+
+document.write("<br>");
+
+//prints 3 times instead of 5 which shows that loop parameters can be changed in the loop and change can affect loop control.
+m=5;
+for(i = 0; i < m; i++)
+{
+    document.write("element(loop parameter change control)<br>");
+    m = 3;
+}
+
+document.write("<br>");
+document.write("<br>");
+
+document.write("----------Evaluation of Loop Parameters----------<br><br>");
+
+document.write("Changing Loop Control Variables & Parameters section showed that changes on loop parameters in the loop have affects on loop varible. So loop parameters are evaluated once for every iteration in JavaScript. ");
+
+</script>
+<body>
+</body>
+</html>

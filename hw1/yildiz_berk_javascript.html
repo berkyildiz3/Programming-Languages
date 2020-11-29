@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//Some lines that produce error can be commented for the sake of execution.
+document.write("----------Types For Legal Subscripts----------<br>");
+var books = ["book1", "book2", "book3", "book4"];
+document.write(books[0]); //output: book1
+document.write("<br>");
+a=1;
+document.write(books[a]); //output: book2
+document.write("<br>");
+c = "a"
+document.write(books[c]); //output: undefined (not an error)
+document.write("<br><br>");
+document.write("----------Range Check----------<br>");
+document.write(books[5]); //output: undefined (not an error)
+document.write("<br>");
+document.write(books[-1]); //output: undefined (not an error)
+document.write("<br><br>");
+document.write("----------Ragged & Rectangular Multidimensioned Arrays----------<br><br>");
+document.write("Example for ragged array:<br>");
+var ragged = [[10, 20, 30], [10, 20]]
+document.write(ragged); //output: 10,20,30,10,20
+document.write("<br>");
+document.write("<br>Example for artificial multidimensional array: <br>");
+var mDimension = [
+   ["a", 10, 1000],
+   ["b", 20, 2000],
+   ["c", 30, 3000],
+   ["d", 40, 4000],
+];
+document.write("mDimension[1][1] = " + mDimension[1][1]); //output: 20
+document.write("<br><br>");
+document.write("----------Array Initialization----------<br>");
+var init = ["Arrays ", "can ", "be ", "initialized ", "in ", "JavaScript."];
+document.write(init); //output: Arrays ,can ,be ,initialized ,in ,JavaScript.
+document.write("<br><br>----------Array Slice----------<br>");
+var sliceExample = ["Slice ", "is ", "supported ", "in ", "JavaScript"];
+var sliced = sliceExample.slice(2, 5);
+document.write(sliced); //output: supported ,in ,JavaScript
+document.write("<br><br>----------Array Operations----------<br><br>");
+document.write("Concatenation: <br>");
+var first = [1,2];
+var second = [3,4];
+var final = first.concat(second);
+document.write("Concatenation of " + first + " and " + second + ": " + final); //output: 1,2,3,4
+document.write("<br><br>Copying array elements within the array, to and from specified positions: <br>");
+first = [1,2,3,4,5,6];
+document.write("Before calling function: " + first + "<br>");
+document.write("After calling fcuntion: " + first.copyWithin(3, 0, 2) + "<br><br>"); //output: 1,2,3,1,2,6
+document.write("Checking if an element includes in an array: <br>");
+document.write(first.includes(3) + "<br>"); //output: true
+document.write(first.includes(10 + "<br>")); //output: false
+document.write("<br><br>Sorting: <br>");
+document.write(first.sort()); //output: 1,1,2,2,3,6
+document.write("<br><br>----------Associative Array----------<br>");
+var capitals = {"Turkey": "Ankara", "UK": "London", "France": "Paris"};
+document.write(capitals["UK"]); //output: London
+
+</script>
+
+</body>
+</html>
+
