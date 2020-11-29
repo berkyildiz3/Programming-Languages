@@ -1,0 +1,9 @@
+a = {1,3,5}
+b = {2,4,6}
+
+if(a.NumberOfElements() == 3)
+{
+c = a+b;
+d = a^b;
+e = a*b; 
+}
